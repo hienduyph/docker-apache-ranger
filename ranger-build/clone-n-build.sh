@@ -21,10 +21,9 @@ fi
 cd /build-src/ranger
 
 echo "Working on revsion ${REVISION}"
-git checkout ${REVISION}
+git checkout ${REVISION} -b ${VERSION}
 mvn versions:set -DnewVersion=${VERSION}-${REVISION}
 
 echo "[Rev ${REVISION}] Pull dependencies"
-mvn dependency:resolve  -Daether.dependencyCollector.impl=bf -Dmaven.artifact.threads=8
 echo "[Rev ${REVISION}] Compiled"
-mvn package -DskipTests
+mvn compile package install -DskipTests -Drat.skip=true -Pall
