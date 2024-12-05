@@ -25,4 +25,5 @@ services:
       - bash
       - -c
       - |
-        clone-n-build.sh
+        sleep infinity
+        # clone-n-build.sh

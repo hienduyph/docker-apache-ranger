@@ -1,4 +1,4 @@
-FROM docker.io/maven:3.9.9-eclipse-temurin-11
+FROM docker.io/maven:3.9.9-eclipse-temurin-8
 
 ARG BUILD_USER
 RUN useradd -u ${BUILD_USER} -m -s /bin/bash build 
