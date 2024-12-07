@@ -25,7 +25,7 @@ services:
       - ranger
 
   ranger:
-    image: hienphdev/ranger-admin:${VERSION}-${REVISION}
+    image: ghcr.io/hienduyph/ranger:admin-${VERSION}-${REVISION}
     container_name: ranger
     depends_on:
       - postgres
@@ -40,7 +40,7 @@ services:
       - ./configs/ranger-admin-install.properties:/opt/ranger/admin/install.properties:Z,ro
 
   ranger-usersync:
-    image: hienphdev/ranger-usersync:${VERSION}-${REVISION}
+    image: ghcr.io/hienduyph/ranger:usersync-${VERSION}-${REVISION}
     container_name: ranger-usersync
     networks:
       - ranger

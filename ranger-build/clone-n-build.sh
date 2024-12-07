@@ -21,9 +21,9 @@ fi
 cd /build-src/ranger
 
 echo "Working on revsion ${REVISION}"
-git checkout ${REVISION} -b ${VERSION}
+git checkout ${REVISION}
 mvn versions:set -DnewVersion=${VERSION}-${REVISION}
 
 echo "[Rev ${REVISION}] Pull dependencies"
 echo "[Rev ${REVISION}] Compiled"
-mvn compile package install -DskipTests -Drat.skip=true -Pall
+mvn compile package install -DskipTests -Dpmd.skip=true  -Drat.skip=true -Pall

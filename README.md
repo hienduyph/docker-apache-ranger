@@ -37,3 +37,7 @@ docker compose up -d
 ```
 
 To to ranger at `http://127.0.0.1:6080`, User and pass is `admin/rangerR0cks!`
+
+# Notices
+
+- `<hive.version>4.0.0</hive.version>` to works with hive jdbc

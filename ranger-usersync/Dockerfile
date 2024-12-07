@@ -1,4 +1,4 @@
-FROM docker.io/eclipse-temurin:8-jre
+FROM docker.io/eclipse-temurin:8-jre-jammy
 
 RUN apt update && apt install python3 curl --no-install-recommends lsb-release -y \
   && rm -rf /var/lib/{apt,dpkg,cache,log}/ \
